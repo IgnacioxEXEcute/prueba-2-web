@@ -41,9 +41,6 @@
   <h1 class="text-center text-uppercase">Deportes</h1>
   <div class="container">
       <div class="row">
-          <button type="button" class="btn btn-primary" id="enviar">Traer datos</button>
-      </div>
-      <div class="row">
           <table class="table" id="categorias">
               <thead>
                   <tr>
@@ -64,7 +61,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
   <script>
-      $("#enviar").click(function(){
+      $(function(){
           $.get("https://www.thesportsdb.com/api/v1/json/1/all_sports.php", 
               function(data){
                   $.each(data.sports, function(i, item){
@@ -75,6 +72,5 @@
 
       });
   </script>
-    <!--aqui escribe tu codigo-->
 </div>
 </body>

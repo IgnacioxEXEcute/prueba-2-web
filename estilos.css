@@ -21,14 +21,16 @@ a{
 }
 body{
     background-color: rgb(233, 233, 233);
+    
 }
 form{
-    text-align:center;	
+    	
     width:400px;
 	padding:17px;
 	border-radius:10px;
 	margin:auto;
 	background-color:#ccc;
+    
  
 }
 *{box-sizing:border-box;}
@@ -69,4 +71,12 @@ textarea{
 	/*resize: vertical | horizontal | none | both*/
 	resize:none;
 	display:block;
+}
+form label{
+	width:100px;
+	font-weight:bold;
+	display:inline-block;
+}
+#fondo{
+    background-image: url(Img/caca.jpg);
 }

@@ -12,7 +12,7 @@
     <LINK REL=StyleSheet HREF="estilos.css" TYPE="text/css" MEDIA=screen>
       <link rel="icon" type="image/svg" href="Img/pelota.svg" />
 </head>
-<body>
+<body id="fondo">
   <!--nav bar-->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
@@ -38,21 +38,28 @@
   <div id="cuerpo" class="container"></div>
   <!--formulario-->
   <form action="" method="post" name="Datos personales">
+    <h4>Regristrate y comenta</h4>
    <div>
-    Nombre: <input type="text" name="nombre" placeholder="Ingrese su nombre">
+     <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre" placeholder="Ingrese su nombre">
     <br><br>
-    Apellido: <input type="text" name="Apellido" placeholder="Ingrese su apellido">
-    <br><br>   
-    Edad: <input type="number" name="edad" placeholder="Ingrese su edad" min="18" max="110">
-    <br><br>  
-    Correo: <input type="email" name="correo" placeholder="Ingrese su contraseña">
+    <label for="apellido">Apellido:</label>
+    <input type="text" name="Apellido" placeholder="Ingrese su apellido">
+    <br><br> 
+    <label for="edad">Edad:</label>  
+    <input type="number" name="edad" placeholder="Ingrese su edad" min="18" max="110">
+    <br><br> 
+    <label for="correo">Correo:</label> 
+    <input type="email" name="correo" placeholder="Ingrese su contraseña">
     <br><br>
-    Contraseña: <input type="password" name="password" placeholder="Ingrese contraseña">
+    <label for="password">Contraseña:</label>
+    <input type="password" name="password" placeholder="Ingrese contraseña">
     <br><br>
-    Reingrese Contraseña: <input type="reingrese contrseña" name="re password" placeholder="Reingrese Contraseña">
+    <label for="re password">Reingrese Contraseña:</label>
+    <input type="password" name="re password" placeholder="Reingrese Contraseña">
 
     <br><br>
-    Comentarios
+    <label for="comentario">Comentarios:</label>
     <br>
      <textarea name="comentario" id="" cols="30" rows="10"></textarea>
     <br><br>

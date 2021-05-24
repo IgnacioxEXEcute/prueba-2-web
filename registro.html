@@ -49,9 +49,6 @@
             <label for="apellido">Apellido:</label>
             <input type="text" name="Apellido" id="apellido" placeholder="Ingrese su apellido">
             <br><br>
-            <label for="edad">Edad:</label>
-            <input type="number" name="edad" id="edad" placeholder="Edad" min="18" max="110">
-            <br><br>
             <label for="rut">Rut:</label>
             <input type="text" name="rut" id="rut" placeholder="11111111-1">
             <br><br>
@@ -62,7 +59,7 @@
             <input type="password" name="password" id="contraseña" placeholder="Ingrese contraseña">
             <br><br>
             <label for="re password">Reingrese Contraseña:</label>
-            <input type="password" name="re password" id="re cobtraseña" placeholder="Reingrese Contraseña">
+            <input type="password" name="re password" id="recontraseña" placeholder="Reingrese Contraseña">
 
             <br><br>
             <label for="comentario">Comentarios:</label>
@@ -84,17 +81,30 @@
             $("#error").hide();
             $("#formulario").submit(function () {
                 var mensaje = "";
+                if ($("#recontraseña").val().trim().length == 0) {
+                    mensaje = "Falta reingresar la contraseña"
+                }
+                if ($("#contraseña").val().trim().length == 0) {
+                    mensaje = "La contraseña está en blanco"
+                }
+                if ($("#correo").val().trim().length == 0) {
+                    mensaje = "El correo está en blanco"
+                }
+                if ($("#apellido").val().trim().length == 0) {
+                    mensaje = "El apellido esta en blanco"
+                }
                 if ($("#nombre").val().trim().length == 0) {
                     mensaje = "El nombre esta en blanco"
                 }
-                if ($("#email").val().trim().length == 0) {
-                    mensaje = "El email está en blanco"
+                if ($("#contraseña").val() !== $("#recontraseña").val()) {
+                    mensaje = "Las contraseñas no coinciden"
                 }
                 if (mensaje != "") {
                     $("#error").html(mensaje);
                     $("#error").show();
                     event.preventDefault();
                 }
+                
             });
         });
     </script>

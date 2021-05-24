@@ -67,5 +67,10 @@ form label{
 	display:inline-block;
 }
 #fondo{
-    background-image: url(Img/caca.jpg);
+    background-image: url(Img/fondoform.jpg);
 }
+
+#centrado{
+	display:block;
+	margin-left: auto;
+	margin-right: auto;

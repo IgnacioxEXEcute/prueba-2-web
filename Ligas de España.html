@@ -65,7 +65,7 @@
           $.get("https://www.thesportsdb.com/api/v1/json/1/search_all_leagues.php?c=spain", 
               function(data){
                   $.each(data.countrys, function(i, item){
-                      $("#categorias").append("<tr><td>" + item.strSport + "</td><td>" + item.strLeague + "</td><td> <a href="+ item.strWebsite  +">" + item.strWebsite  + "</a>"+"</td><td>" + item.strDescriptionEN + "</td></tr>")
+                      $("#categorias").append("<tr><td>" + item.strSport + "</td><td>" + item.strLeague + "</td><td> <a href="+"https://"+  item.strWebsite  +">" + item.strWebsite  + "</a>"+"</td><td>" + item.strDescriptionEN + "</td></tr>")
                   });
 
               });
@@ -75,4 +75,3 @@
 </div>
 </body>
 </html>
-<a href="item.strWebsite>" gsdfsds></a> "</a>
